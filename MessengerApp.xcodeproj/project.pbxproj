@@ -11,6 +11,8 @@
 		854FD4942AD4D072005E0811 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4932AD4D072005E0811 /* ContentView.swift */; };
 		854FD4962AD4D074005E0811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854FD4952AD4D074005E0811 /* Assets.xcassets */; };
 		854FD4992AD4D074005E0811 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854FD4982AD4D074005E0811 /* Preview Assets.xcassets */; };
+		854FD4A52AD4D35C005E0811 /* LogginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4A42AD4D35C005E0811 /* LogginView.swift */; };
+		854FD4A72AD4D36C005E0811 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4A62AD4D36C005E0811 /* CreateAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		854FD4932AD4D072005E0811 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		854FD4952AD4D074005E0811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		854FD4982AD4D074005E0811 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		854FD4A42AD4D35C005E0811 /* LogginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginView.swift; sourceTree = "<group>"; };
+		854FD4A62AD4D36C005E0811 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		854FD4902AD4D072005E0811 /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				854FD4912AD4D072005E0811 /* MessengerAppApp.swift */,
-				854FD4932AD4D072005E0811 /* ContentView.swift */,
+				854FD4AA2AD4D81E005E0811 /* Extensions */,
+				854FD4A82AD4D803005E0811 /* App */,
+				854FD4AB2AD4D835005E0811 /* Core */,
+				854FD4A92AD4D80C005E0811 /* Model */,
 				854FD4952AD4D074005E0811 /* Assets.xcassets */,
 				854FD4972AD4D074005E0811 /* Preview Content */,
 			);
@@ -65,6 +71,62 @@
 				854FD4982AD4D074005E0811 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		854FD49F2AD4D310005E0811 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				854FD4A42AD4D35C005E0811 /* LogginView.swift */,
+				854FD4A62AD4D36C005E0811 /* CreateAccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		854FD4A82AD4D803005E0811 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				854FD4912AD4D072005E0811 /* MessengerAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		854FD4A92AD4D80C005E0811 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		854FD4AA2AD4D81E005E0811 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		854FD4AB2AD4D835005E0811 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				854FD4AC2AD4D840005E0811 /* Authentication */,
+				854FD4AD2AD4D853005E0811 /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		854FD4AC2AD4D840005E0811 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				854FD49F2AD4D310005E0811 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		854FD4AD2AD4D853005E0811 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				854FD4932AD4D072005E0811 /* ContentView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +201,8 @@
 			files = (
 				854FD4942AD4D072005E0811 /* ContentView.swift in Sources */,
 				854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */,
+				854FD4A72AD4D36C005E0811 /* CreateAccountView.swift in Sources */,
+				854FD4A52AD4D35C005E0811 /* LogginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
