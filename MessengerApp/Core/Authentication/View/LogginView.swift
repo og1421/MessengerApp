@@ -14,38 +14,113 @@ struct LoginView: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            
-            Spacer()
-            
-            TextField("", text: $email)
-                .background(.red)
-            
-            TextField("", text: $password)
-                .background(.blue)
-            
-            Button {
+        NavigationStack {
+            VStack {
                 
-            } label: {
-                Text("Forgot Password?")
-            }
-            
-            Button {
+                Spacer()
                 
-            } label: {
-                Text("Login")
-            }
-            
-            Spacer()
-            
-            
-            
-            Button {
+                VStack(spacing: 22 ) {
+                    
+                    //text field
+                    
+                    TextField("Enter your email", text: $email)
+                        .font(.headline)
+                        .padding(12)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 24)
+                    
+                    
+                    SecureField("Enter your password", text: $password)
+                        .font(.headline)
+                        .padding(12)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 24)
+                }
                 
-            } label: {
-                Text("Don't have an account? Sign Up")
+                //forgot password
+                
+                Button {
+                    print("Forgot password")
+                    
+                } label: {
+                    Text("Forgot Password?")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .padding(.top)
+                        .padding(.trailing, 28)
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                
+                //login button
+                Button {
+                    print("Handle Login")
+                } label: {
+                    Text("Login")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 360, height: 44)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(10)
+                }
+                .padding(.vertical)
+                
+                HStack {
+                    Rectangle()
+                        .frame( width: (UIScreen.main.bounds.width / 2 ) - 40, height: 0.5)
+                    
+                    Text("OR")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    
+                    Rectangle()
+                        .frame( width: (UIScreen.main.bounds.width / 2 ) - 40, height: 0.5)
+                    
+                }
+                    .foregroundColor(.gray)
+                
+                VStack {
+                    
+                    //facebook logo
+                    HStack {
+                        
+                    }
+                    .padding(.top, 8)
+                    
+                    // Google logo
+                    HStack {
+                        
+                    }
+                    .padding(.top, 8)
+                    
+                    //Apple logo
+                    HStack {
+                        
+                    }
+                    .padding(.top, 8)
+                }
+                
+                Spacer()
+                
+                Divider()
+                
+                // sign up link
+                NavigationLink {
+                    Text("Sign up view")
+                } label: {
+                    HStack(spacing: 3) {
+                        Text("Don't have an account?")
+                        
+                        Text("Sign up")
+                            .fontWeight(.semibold)
+                    }
+                    .font(.footnote)
+                }
+                .padding(.vertical)
+                
             }
-            
         }
     }
 }
