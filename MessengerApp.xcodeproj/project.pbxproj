@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850AC0722ADEBF5000707DA8 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850AC0712ADEBF5000707DA8 /* CircularProfileImageView.swift */; };
 		854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4912AD4D072005E0811 /* MessengerAppApp.swift */; };
 		854FD4942AD4D072005E0811 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4932AD4D072005E0811 /* ContentView.swift */; };
 		854FD4962AD4D074005E0811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854FD4952AD4D074005E0811 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		850AC0712ADEBF5000707DA8 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		854FD48E2AD4D072005E0811 /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854FD4912AD4D072005E0811 /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		854FD4932AD4D072005E0811 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		850AC0702ADEBF2E00707DA8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				850AC0712ADEBF5000707DA8 /* CircularProfileImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		854FD4852AD4D072005E0811 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 			children = (
 				85DD4B7B2AD8B28000B3340E /* ActiveNow */,
 				854FD4AC2AD4D840005E0811 /* Authentication */,
+				850AC0702ADEBF2E00707DA8 /* Components */,
 				85DD4B782AD8B0E800B3340E /* Inbox */,
 				85E9421B2ADA10B7008ED1DF /* NewMessage */,
 				85E9421E2ADA1442008ED1DF /* Profile */,
@@ -276,6 +287,7 @@
 				85E9421D2ADA10DA008ED1DF /* NewMessageView.swift in Sources */,
 				854FD4942AD4D072005E0811 /* ContentView.swift in Sources */,
 				854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */,
+				850AC0722ADEBF5000707DA8 /* CircularProfileImageView.swift in Sources */,
 				85DD4B7A2AD8B10200B3340E /* InboxView.swift in Sources */,
 				85DD4B7D2AD8B29D00B3340E /* ActiveNowView.swift in Sources */,
 				85EE8EE62ADE0CD6000D6B22 /* ProfileViewModel.swift in Sources */,
