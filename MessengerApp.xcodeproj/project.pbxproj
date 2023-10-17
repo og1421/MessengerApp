@@ -19,6 +19,7 @@
 		85E9421D2ADA10DA008ED1DF /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9421C2ADA10DA008ED1DF /* NewMessageView.swift */; };
 		85E942222ADA146E008ED1DF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E942212ADA146E008ED1DF /* ProfileView.swift */; };
 		85E942242ADA159D008ED1DF /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E942232ADA159D008ED1DF /* SettingsOptionsViewModel.swift */; };
+		85EE8EE62ADE0CD6000D6B22 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE8EE52ADE0CD6000D6B22 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		85E9421C2ADA10DA008ED1DF /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		85E942212ADA146E008ED1DF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		85E942232ADA159D008ED1DF /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
+		85EE8EE52ADE0CD6000D6B22 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				85E942232ADA159D008ED1DF /* SettingsOptionsViewModel.swift */,
+				85EE8EE52ADE0CD6000D6B22 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */,
 				85DD4B7A2AD8B10200B3340E /* InboxView.swift in Sources */,
 				85DD4B7D2AD8B29D00B3340E /* ActiveNowView.swift in Sources */,
+				85EE8EE62ADE0CD6000D6B22 /* ProfileViewModel.swift in Sources */,
 				854FD4A72AD4D36C005E0811 /* CreateAccountView.swift in Sources */,
 				85E942242ADA159D008ED1DF /* SettingsOptionsViewModel.swift in Sources */,
 				854FD4A52AD4D35C005E0811 /* LogginView.swift in Sources */,
