@@ -10,10 +10,7 @@ import SwiftUI
 struct CreateAccountView: View {
     
     //MARK: - Properties
-    @State private var email = ""
-    @State private var password = ""
-    @State private var fullName = ""
-    
+    @StateObject var viewModel = RegistrationViewModel()
     @Environment (\.dismiss) var dismiss
     
     //MARK: - View
@@ -26,14 +23,14 @@ struct CreateAccountView: View {
                 
                 //text field
                 
-                TextField("Enter your email", text: $email)
+                TextField("Enter your email", text: $viewModel.email)
                     .font(.headline)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
                     .padding(.horizontal, 24)
                 
-                TextField("Enter your full name", text: $fullName)
+                TextField("Enter your full name", text: $viewModel.fullName)
                     .font(.headline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -41,7 +38,7 @@ struct CreateAccountView: View {
                     .padding(.horizontal, 24)
                 
                 
-                SecureField("Enter your password", text: $password)
+                SecureField("Enter your password", text: $viewModel.password)
                     .font(.headline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -51,7 +48,9 @@ struct CreateAccountView: View {
             
             //login button
             Button {
-                print("Handle Login")
+                Task {
+                    try await viewModel.createUser()
+                }
             } label: {
                 Text("Sign Up")
                     .font(.subheadline)
