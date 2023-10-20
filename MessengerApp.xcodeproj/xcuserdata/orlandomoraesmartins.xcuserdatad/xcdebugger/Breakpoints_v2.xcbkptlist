@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C3190E37-AD8C-4DC8-8F76-282CA15D84A3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEDA8AE6-B658-4426-B5D4-63EAF7D2129E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Service/UserService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetchCurrentuser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AEDA8AE6-B658-4426-B5D4-63EAF7D2129E - 4b70abf2d99e670e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessengerApp.UserService.fetchCurrentuser() async throws -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/orlandomoraesmartins/Documents/Desenvolvimento/MessengerApp/MessengerApp/Service/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "AEDA8AE6-B658-4426-B5D4-63EAF7D2129E - aa5d2ed32836b538"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for MessengerApp.UserService.fetchCurrentuser() async throws -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/orlandomoraesmartins/Documents/Desenvolvimento/MessengerApp/MessengerApp/Service/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEFB0654-056F-47EB-B4D9-718DA46417CD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Service/UserService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchCurrentuser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
