@@ -15,6 +15,7 @@ class UserService {
     
     static let shared = UserService()
     
+    @MainActor
     func fetchCurrentuser() async throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
@@ -23,7 +24,6 @@ class UserService {
         
     }
     
-    @MainActor
     static func fetchAllUsers() async throws -> [User] {
         let snapshot = try await Firestore.firestore().collection("users").getDocuments()
         let users = snapshot.documents.compactMap({try? $0.data(as: User.self)})

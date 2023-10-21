@@ -12,6 +12,8 @@ struct InboxView: View {
     //MARK: - Properties
     @State private var showNewMessageView = false
     @StateObject var viewModel = InboxViewModel()
+    @State private var selectedUser: User?
+    @State private var showChat = false
     
     private var user: User? {
         return viewModel.currentUser
@@ -34,8 +36,16 @@ struct InboxView: View {
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
+            .onChange(of: selectedUser)  { oldValue, newValue in
+                showChat = newValue != nil
+            }
+            .navigationDestination(isPresented: $showChat, destination: {
+                if let user = selectedUser {
+                    ChatView(user: user)
+                }
+            })
             .fullScreenCover(isPresented: $showNewMessageView) {
-                NewMessageView()
+                NewMessageView(selectedUser: $selectedUser)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
