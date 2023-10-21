@@ -17,6 +17,7 @@
 		853206352AE4688E00F507C4 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853206342AE4688E00F507C4 /* ChatViewModel.swift */; };
 		853206382AE481A700F507C4 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853206372AE481A700F507C4 /* ChatService.swift */; };
 		8532063B2AE483AF00F507C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532063A2AE483AF00F507C4 /* Constants.swift */; };
+		8532063E2AE4870300F507C4 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532063D2AE4870300F507C4 /* InboxService.swift */; };
 		854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4912AD4D072005E0811 /* MessengerAppApp.swift */; };
 		854FD4942AD4D072005E0811 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4932AD4D072005E0811 /* ContentView.swift */; };
 		854FD4962AD4D074005E0811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854FD4952AD4D074005E0811 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		853206342AE4688E00F507C4 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		853206372AE481A700F507C4 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		8532063A2AE483AF00F507C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8532063D2AE4870300F507C4 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
 		854FD48E2AD4D072005E0811 /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854FD4912AD4D072005E0811 /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		854FD4932AD4D072005E0811 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8532063C2AE486EF00F507C4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8532063D2AE4870300F507C4 /* InboxService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		854FD4852AD4D072005E0811 = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +232,6 @@
 		854FD4902AD4D072005E0811 /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				854FD4AA2AD4D81E005E0811 /* Extensions */,
 				854FD4A82AD4D803005E0811 /* App */,
 				854FD4AB2AD4D835005E0811 /* Core */,
 				854FD4A92AD4D80C005E0811 /* Model */,
@@ -282,7 +291,9 @@
 				854FD4AC2AD4D840005E0811 /* Authentication */,
 				850AC0732ADF1C6200707DA8 /* Chat */,
 				850AC0702ADEBF2E00707DA8 /* Components */,
+				854FD4AA2AD4D81E005E0811 /* Extensions */,
 				85DD4B782AD8B0E800B3340E /* Inbox */,
+				8532063C2AE486EF00F507C4 /* Service */,
 				85E9421B2ADA10B7008ED1DF /* NewMessage */,
 				85E9421E2ADA1442008ED1DF /* Profile */,
 				854FD4AD2AD4D853005E0811 /* Root */,
@@ -555,6 +566,7 @@
 				850AC0752ADF1C8000707DA8 /* ChatView.swift in Sources */,
 				85AA76012AE1ABBE00C1B530 /* AuthService.swift in Sources */,
 				854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */,
+				8532063E2AE4870300F507C4 /* InboxService.swift in Sources */,
 				8532063B2AE483AF00F507C4 /* Constants.swift in Sources */,
 				85AA75FD2AE1AB6100C1B530 /* LoginVIewModel.swift in Sources */,
 				85068DC42AE0559F0014D895 /* ChatMessageCell.swift in Sources */,
@@ -630,7 +642,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -687,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

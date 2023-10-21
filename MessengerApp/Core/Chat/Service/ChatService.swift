@@ -20,6 +20,9 @@ struct ChatService {
         let currentUserRef = FirestoreConstants.messagesCollections.document(currentUid).collection(chatPartnerId).document()
         let chatPartnerRef = FirestoreConstants.messagesCollections.document(chatPartnerId).collection(currentUid)
         
+        let recentCurrentUserRef = FirestoreConstants.messagesCollections.document(currentUid).collection("recent-messages").document(chatPartnerId)
+        let recentPartnerResf = FirestoreConstants.messagesCollections.document(chatPartnerId).collection("recent-messages").document(currentUid)
+        
         let messageId = currentUserRef.documentID
         
         let message = Message(messageId: messageId,
@@ -33,6 +36,9 @@ struct ChatService {
         
         currentUserRef.setData(messageData)
         chatPartnerRef.document(messageId).setData(messageData)
+        
+        recentCurrentUserRef.setData(messageData)
+        recentPartnerResf.setData(messageData)
     }
     
     func observeMessages (completion: @escaping ([Message]) -> Void) {

@@ -26,19 +26,31 @@ struct InboxView: View {
                 ActiveNowView()
                 
                 List {
-                    ForEach ( 0 ... 10, id: \.self) { message in
-                        InboxRowView()
+                    ForEach ( viewModel.recentMessages ) { message in
+                        ZStack {
+                            NavigationLink(value: message) {
+                                EmptyView()
+                            }
+                            .opacity(0.0)
+                            
+                            InboxRowView(message: message)
+                        }
                     }
                 }
                 .listStyle(PlainListStyle())
                 .frame(height: UIScreen.main.bounds.height - 120)
             }
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                }
+            })
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
-            .onChange(of: selectedUser)  { oldValue, newValue in
+            .onChange(of: selectedUser, perform:  { newValue in
                 showChat = newValue != nil
-            }
+            })
             .navigationDestination(isPresented: $showChat, destination: {
                 if let user = selectedUser {
                     ChatView(user: user)
