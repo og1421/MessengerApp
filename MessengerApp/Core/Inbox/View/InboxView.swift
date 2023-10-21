@@ -11,7 +11,11 @@ struct InboxView: View {
     
     //MARK: - Properties
     @State private var showNewMessageView = false
-    @State private var user = User.MOCK_USER
+    @StateObject var viewModel = InboxViewModel()
+    
+    private var user: User? {
+        return viewModel.currentUser
+    }
     
     //MARK: - View
     var body: some View {
