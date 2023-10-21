@@ -15,7 +15,7 @@ struct Message: Identifiable, Codable, Hashable {
     let fromId: String
     let toId: String
     let messageText: String
-    let timeStamp: Timestamp
+    let timestamp: Timestamp
     
     var user: User?
     var id: String {
@@ -28,5 +28,9 @@ struct Message: Identifiable, Codable, Hashable {
     
     var isFromCurrentUser: Bool {
         return fromId == Auth.auth().currentUser?.uid
+    }
+    
+    var timestampString: String {
+        return timestamp.dateValue().timestampString()
     }
 }

@@ -22,24 +22,24 @@ struct InboxView: View {
     //MARK: - View
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ActiveNowView()
-                
-                List {
-                    ForEach ( viewModel.recentMessages ) { message in
-                        ZStack {
-                            NavigationLink(value: message) {
-                                EmptyView()
-                            }
-                            .opacity(0.0)
-                            
-                            InboxRowView(message: message)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .padding(.vertical)
+                    .padding(.horizontal, 4)
+                ForEach ( viewModel.recentMessages ) { message in
+                    ZStack {
+                        NavigationLink(value: message) {
+                            EmptyView()
                         }
+                        .opacity(0.0)
+                        
+                        InboxRowView(message: message)
                     }
                 }
-                .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height - 120)
             }
+            .listStyle(PlainListStyle())
             .navigationDestination(for: Message.self, destination: { message in
                 if let user = message.user {
                     ChatView(user: user)
