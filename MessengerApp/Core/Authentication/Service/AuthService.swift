@@ -19,10 +19,8 @@ class AuthService {
     
     init() {
         self.userSession = Auth.auth().currentUser
+        loadCurrentUserData()
         
-        Task { try await UserService.shared.fetchCurrentuser() }
-        
-        print("DEBUG: User session id is \(userSession?.uid)")
     }
     
     @MainActor
@@ -30,7 +28,7 @@ class AuthService {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
-            
+            loadCurrentUserData()
         } catch {
             print("DEBUG: failed to sign in user with error: \(error.localizedDescription)")
         }
@@ -42,6 +40,7 @@ class AuthService {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
             try await self.uploadUserData(email: email, fullName: fullName, id: result.user.uid)
+            loadCurrentUserData()
         } catch {
             print("DEBUG: failed to create user with error: \(error.localizedDescription)")
         }
@@ -49,8 +48,9 @@ class AuthService {
     
     func signOut() {
         do {
-            try Auth.auth().signOut()
-            self.userSession = nil
+            try Auth.auth().signOut() //sign out on backend
+            self.userSession = nil //updates routing logic
+            UserService.shared.currentUser = nil
         } catch {
             print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
@@ -64,4 +64,7 @@ class AuthService {
         
     }
     
+    private func loadCurrentUserData() {
+        Task { try await UserService.shared.fetchCurrentuser() }
+    }
 }
