@@ -19,6 +19,7 @@
 		8532063B2AE483AF00F507C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532063A2AE483AF00F507C4 /* Constants.swift */; };
 		8532063E2AE4870300F507C4 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532063D2AE4870300F507C4 /* InboxService.swift */; };
 		853206402AE48F5500F507C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532063F2AE48F5500F507C4 /* Date.swift */; };
+		853206442AE496EA00F507C4 /* ActiveNowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853206432AE496EA00F507C4 /* ActiveNowViewModel.swift */; };
 		854FD4922AD4D072005E0811 /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4912AD4D072005E0811 /* MessengerAppApp.swift */; };
 		854FD4942AD4D072005E0811 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FD4932AD4D072005E0811 /* ContentView.swift */; };
 		854FD4962AD4D074005E0811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854FD4952AD4D074005E0811 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		85E942242ADA159D008ED1DF /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E942232ADA159D008ED1DF /* SettingsOptionsViewModel.swift */; };
 		85EE8EE62ADE0CD6000D6B22 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE8EE52ADE0CD6000D6B22 /* ProfileViewModel.swift */; };
 		85EE8EE82ADE0FE5000D6B22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE8EE72ADE0FE5000D6B22 /* User.swift */; };
+		85F4B1A22AE49A9300ACF008 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4B1A12AE49A9300ACF008 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,7 @@
 		8532063A2AE483AF00F507C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8532063D2AE4870300F507C4 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
 		8532063F2AE48F5500F507C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		853206432AE496EA00F507C4 /* ActiveNowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowViewModel.swift; sourceTree = "<group>"; };
 		854FD48E2AD4D072005E0811 /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854FD4912AD4D072005E0811 /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		854FD4932AD4D072005E0811 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		85E942232ADA159D008ED1DF /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 		85EE8EE52ADE0CD6000D6B22 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		85EE8EE72ADE0FE5000D6B22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		85F4B1A12AE49A9300ACF008 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +169,9 @@
 		850AC0732ADF1C6200707DA8 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				853206362AE4819400F507C4 /* Service */,
 				853206322AE4685E00F507C4 /* View */,
 				853206332AE4686900F507C4 /* ViewModel */,
+				853206362AE4819400F507C4 /* Service */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -214,6 +218,30 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		853206412AE496C800F507C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85DD4B7C2AD8B29D00B3340E /* ActiveNowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		853206422AE496D200F507C4 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				853206432AE496EA00F507C4 /* ActiveNowViewModel.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		853206452AE499FD00F507C4 /* Rounting */ = {
+			isa = PBXGroup;
+			children = (
+				85F4B1A12AE49A9300ACF008 /* Route.swift */,
+			);
+			path = Rounting;
+			sourceTree = "<group>";
+		};
 		854FD4852AD4D072005E0811 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +266,7 @@
 				854FD4AA2AD4D81E005E0811 /* Extensions */,
 				854FD4AB2AD4D835005E0811 /* Core */,
 				854FD4A92AD4D80C005E0811 /* Model */,
+				853206452AE499FD00F507C4 /* Rounting */,
 				85DD0CC32AE2D79B008D6654 /* Service */,
 				853206392AE4839800F507C4 /* Utils */,
 				854FD4952AD4D074005E0811 /* Assets.xcassets */,
@@ -410,7 +439,8 @@
 		85DD4B7B2AD8B28000B3340E /* ActiveNow */ = {
 			isa = PBXGroup;
 			children = (
-				85DD4B7C2AD8B29D00B3340E /* ActiveNowView.swift */,
+				853206412AE496C800F507C4 /* View */,
+				853206422AE496D200F507C4 /* VIewModel */,
 			);
 			path = ActiveNow;
 			sourceTree = "<group>";
@@ -579,12 +609,14 @@
 				850AC0722ADEBF5000707DA8 /* CircularProfileImageView.swift in Sources */,
 				85DD4B7A2AD8B10200B3340E /* InboxView.swift in Sources */,
 				8502E8082AE4589C0045643B /* NewMessageViewModel.swift in Sources */,
+				85F4B1A22AE49A9300ACF008 /* Route.swift in Sources */,
 				85DD0CC52AE2D7B1008D6654 /* UserService.swift in Sources */,
 				85DD4B7D2AD8B29D00B3340E /* ActiveNowView.swift in Sources */,
 				85EE8EE62ADE0CD6000D6B22 /* ProfileViewModel.swift in Sources */,
 				85EE8EE82ADE0FE5000D6B22 /* User.swift in Sources */,
 				853206312AE465C700F507C4 /* MessageService.swift in Sources */,
 				854FD4A72AD4D36C005E0811 /* CreateAccountView.swift in Sources */,
+				853206442AE496EA00F507C4 /* ActiveNowViewModel.swift in Sources */,
 				8532062F2AE4646500F507C4 /* Message.swift in Sources */,
 				85E942242ADA159D008ED1DF /* SettingsOptionsViewModel.swift in Sources */,
 				854FD4A52AD4D35C005E0811 /* LogginView.swift in Sources */,
