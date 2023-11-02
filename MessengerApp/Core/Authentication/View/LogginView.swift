@@ -85,22 +85,60 @@ struct LoginView: View {
                 VStack {
                     
                     //facebook logo
-                    HStack {
+                    Button {
                         
+                    } label: {
+                        HStack {
+                            Text("Sign in with Facebook")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                
+                        }
+                        .padding(.top, 8)
                     }
-                    .padding(.top, 8)
+                    .frame(width: 360, height: 50)
+                    .clipShape(Capsule())
+                    .background(Color(.systemBlue))
+                    .cornerRadius(15)
                     
                     // Google logo
-                    HStack {
+                    Button{
                         
+                    } label: {
+                        HStack {
+                            
+                            Text("Sign in with Google")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                            
+                        }
+                        .padding(.top, 8)
                     }
-                    .padding(.top, 8)
+                    .frame(width: 360, height: 50)
+                    .clipShape(Capsule())
+                    .background(.red)
+                    .cornerRadius(15)
+                    
                     
                     //Apple logo
-                    HStack {
+                    Button{
                         
+                    } label: {
+                        HStack {
+                            
+                            Text("Sign in with Apple")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.top, 8)
                     }
-                    .padding(.top, 8)
+                    .frame(width: 360, height: 50)
+                    .clipShape(Capsule())
+                    .background(.black)
+                    .cornerRadius(15)
                 }
                 
                 Spacer()
