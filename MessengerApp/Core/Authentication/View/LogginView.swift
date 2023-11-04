@@ -89,24 +89,46 @@ struct LoginView: View {
                         
                     } label: {
                         HStack {
+                            Image("facebook-logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                            
+                            
                             Text("Sign in with Facebook")
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
-                                .foregroundColor(.white)
+                                .foregroundColor(.blue)
                                 
                         }
                         .padding(.top, 8)
                     }
                     .frame(width: 360, height: 50)
                     .clipShape(Capsule())
-                    .background(Color(.systemBlue))
-                    .cornerRadius(15)
+                    .background(.white)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.blue, lineWidth: 2)
+                    )
                     
                     // Google logo
                     Button{
                         
                     } label: {
                         HStack {
+                            
+                            ZStack {
+                                Circle()
+                                    .fill(.white)
+                                    .frame(width: 30, height: 30)
+                                
+                                Image("google-logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                .frame(width: 25, height: 25)
+                            }
+                            
                             
                             Text("Sign in with Google")
                                 .font(.subheadline)
@@ -119,7 +141,7 @@ struct LoginView: View {
                     .frame(width: 360, height: 50)
                     .clipShape(Capsule())
                     .background(.red)
-                    .cornerRadius(15)
+                    .cornerRadius(10)
                     
                     
                     //Apple logo
@@ -127,6 +149,11 @@ struct LoginView: View {
                         
                     } label: {
                         HStack {
+                            
+                            Image("apple-logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
                             
                             Text("Sign in with Apple")
                                 .font(.subheadline)
@@ -138,7 +165,7 @@ struct LoginView: View {
                     .frame(width: 360, height: 50)
                     .clipShape(Capsule())
                     .background(.black)
-                    .cornerRadius(15)
+                    .cornerRadius(10)
                 }
                 
                 Spacer()
