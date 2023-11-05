@@ -11,7 +11,7 @@ It is an instant message app created with SwiftUI and is not completely finished
 Here you can login with your personal email created or Facebook, Google and Apple account.
 
 <img src="https://github.com/og1421/MessengerApp/blob/main/Imagens/LoginView.jpeg"
-height="560" width="280">
+height="560" width="560">
 
 
 ### Creating an account
