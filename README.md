@@ -24,10 +24,10 @@ height="560" width="280">
 This is the main view where you can see online friends, and your messages, create a new chat, or change your profile stats.
 
 <img src="https://github.com/og1421/MessengerApp/blob/main/Imagens/InboxView.jpeg"
-height="450" width="225"> | <img src="https://github.com/og1421/MessengerApp/blob/main/Imagens/ProfileView.jpeg"
-height="450" width="225"> | <img src="https://github.com/og1421/MessengerApp/blob/main/Imagens/NewMessage.png"
+height="450" width="450"> | <img src="https://github.com/og1421/MessengerApp/blob/main/Imagens/ProfileView.jpeg"
+height="450" width="450"> | <img src="https://github.com/og1421/MessengerApp/blob/main/Imagens/NewMessage.png"
 height="450" width="225"> | <img src=https://github.com/og1421/MessengerApp/blob/main/Imagens/ChatView.jpeg
-height="450" width="225">
+height="450" width="450">
 
 
 ## Technologies used
