@@ -84,7 +84,7 @@ struct LoginView: View {
                 
                 VStack {
                     
-                    //facebook logo
+                    //MARK: - Facebook login
                     Button {
                         
                     } label: {
@@ -92,7 +92,7 @@ struct LoginView: View {
                             Image("facebook-logo")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 25, height: 25)
+                                .frame(width: 22, height: 22)
                             
                             
                             Text("Sign in with Facebook")
@@ -111,8 +111,7 @@ struct LoginView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 2)
                     )
-                    
-                    // Google logo
+                    //MARK: - Google login
                     Button{
                         
                     } label: {
@@ -121,12 +120,12 @@ struct LoginView: View {
                             ZStack {
                                 Circle()
                                     .fill(.white)
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: 25, height: 25)
                                 
                                 Image("google-logo")
                                     .resizable()
                                     .scaledToFit()
-                                .frame(width: 25, height: 25)
+                                .frame(width: 20, height: 20)
                             }
                             
                             
@@ -138,13 +137,13 @@ struct LoginView: View {
                         }
                         .padding(.top, 8)
                     }
-                    .frame(width: 360, height: 50)
-                    .clipShape(Capsule())
-                    .background(.red)
-                    .cornerRadius(10)
+                        .frame(width: 360, height: 50)
+                        .clipShape(Capsule())
+                        .background(.red)
+                        .cornerRadius(10)
+                        
                     
-                    
-                    //Apple logo
+                    //MARK: - Apple login
                     Button{
                         
                     } label: {
@@ -153,7 +152,7 @@ struct LoginView: View {
                             Image("apple-logo")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 25, height: 25)
+                                .frame(width: 20, height: 20)
                             
                             Text("Sign in with Apple")
                                 .font(.subheadline)
