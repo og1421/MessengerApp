@@ -75,9 +75,9 @@ struct InboxView: View {
                             
                             }
                             
-                            Text("Chats")
-                                .font(.title)
-                                .fontWeight(.semibold)
+//                            Text("Chats")
+//                                .font(.title)
+//                                .fontWeight(.semibold)
                         }
                     }
                     
