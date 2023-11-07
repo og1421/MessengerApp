@@ -101,7 +101,7 @@ struct LoginView: View {
                                 .foregroundColor(.blue)
                                 
                         }
-                        .padding(.top, 8)
+                        .padding(.top, 4)
                     }
                     .frame(width: 360, height: 50)
                     .clipShape(Capsule())
@@ -135,7 +135,7 @@ struct LoginView: View {
                                 .foregroundColor(.white)
                             
                         }
-                        .padding(.top, 8)
+                        .padding(.top, 4)
                     }
                         .frame(width: 360, height: 50)
                         .clipShape(Capsule())
@@ -159,7 +159,7 @@ struct LoginView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
                         }
-                        .padding(.top, 8)
+                        .padding(.top, 4)
                     }
                     .frame(width: 360, height: 50)
                     .clipShape(Capsule())
