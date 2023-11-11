@@ -28,6 +28,7 @@ struct InboxView: View {
                     .listRowInsets(EdgeInsets())
                     .padding(.vertical)
                     .padding(.horizontal, 4)
+                
                 ForEach ( viewModel.recentMessages ) { message in
                     ZStack {
                         NavigationLink(value: message) {
@@ -38,6 +39,7 @@ struct InboxView: View {
                         InboxRowView(message: message)
                     }
                 }
+                .onDelete(perform: viewModel.deleteItem)
             }
             .navigationTitle("Chats")
             .navigationBarTitleDisplayMode(.inline)

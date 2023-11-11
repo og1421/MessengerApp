@@ -14,7 +14,6 @@ class InboxViewModel: ObservableObject {
     @Published var currentUser: User?
     @Published var recentMessages = [Message]()
     
-    
     private var cancellables = Set<AnyCancellable>()
     private let service = InboxService()
     
@@ -45,5 +44,18 @@ class InboxViewModel: ObservableObject {
                 self.recentMessages.append(messages[i])
             }
         }
+    }
+    
+    @MainActor
+    func deleteItem (at offset: IndexSet) {
+        guard let index = offset.first else  {
+            return
+        }
+        
+        let messageId = recentMessages[index].messageId
+        print(messageId ?? "Não deu")
+        
+        recentMessages.remove(atOffsets: offset)
+        
     }
 }
