@@ -52,10 +52,25 @@ class InboxViewModel: ObservableObject {
             return
         }
         
-        let messageId = recentMessages[index].messageId
-        print(messageId ?? "Não deu")
+        guard let userID = currentUser?.uid else {
+            print("Unable to retrieve current user id")
+            return
+        }
         
-        recentMessages.remove(atOffsets: offset)
+        guard let messageId = recentMessages[index].messageId else {
+            print("Unable to retrieve the message id")
+            return
+            
+        }
+        
+        print("DEBUG: o código do presente usuário é:  \(userID)")
+        print("DEBUG: o código da mensagem a ser apagada é: \(messageId)")
+        
+        //TODO - deletar a mensagem do servidor
+        
+//        recentMessages.remove(atOffsets: offset)
+        
+        MessageService.deleteUserMessage(userID: userID, withId: messageId)
         
     }
 }

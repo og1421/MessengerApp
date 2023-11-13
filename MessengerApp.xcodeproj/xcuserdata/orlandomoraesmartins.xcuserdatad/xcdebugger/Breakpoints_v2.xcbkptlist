@@ -3,4 +3,118 @@
    uuid = "C3190E37-AD8C-4DC8-8F76-282CA15D84A3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30A4F4E2-F3C9-4B2A-9E22-8BFFA0FC4DE2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Service/MessageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "deleteUserMessage(userID:withId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "30A4F4E2-F3C9-4B2A-9E22-8BFFA0FC4DE2 - 13895d7a8964835f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static MessengerApp.MessageService.deleteUserMessage(userID: Swift.String, withId: Swift.String) -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/orlandomoraesmartins/Documents/Desenvolvimento/MessengerApp/MessengerApp/Service/MessageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1632">
+               </Location>
+               <Location
+                  uuid = "30A4F4E2-F3C9-4B2A-9E22-8BFFA0FC4DE2 - 2e9363609b7d7917"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static MessengerApp.MessageService.deleteUserMessage(userID: Swift.String, withId: Swift.String) -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/orlandomoraesmartins/Documents/Desenvolvimento/MessengerApp/MessengerApp/Service/MessageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "130B941B-1A96-4AA8-A667-447969A66E42"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Service/MessageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "deleteUserMessage(userID:withId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "130B941B-1A96-4AA8-A667-447969A66E42 - 13895d7a896482fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static MessengerApp.MessageService.deleteUserMessage(userID: Swift.String, withId: Swift.String) -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/orlandomoraesmartins/Documents/Desenvolvimento/MessengerApp/MessengerApp/Service/MessageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "130B941B-1A96-4AA8-A667-447969A66E42 - 13895d7a896482fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static MessengerApp.MessageService.deleteUserMessage(userID: Swift.String, withId: Swift.String) -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/orlandomoraesmartins/Documents/Desenvolvimento/MessengerApp/MessengerApp/Service/MessageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DD83134-BF6E-429A-B11B-AEC26A3D18EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Core/Inbox/ViewModel/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "deleteItem(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

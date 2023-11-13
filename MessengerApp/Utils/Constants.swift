@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 struct FirestoreConstants {
-    static let usersCollections = Firestore.firestore().collection("users")
-    static let messagesCollections = Firestore.firestore().collection("messages")
+    static let db = Firestore.firestore()
+    static let usersCollections = db.collection("users")
+    static let messagesCollections = db.collection("messages")
 }
