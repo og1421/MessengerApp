@@ -237,6 +237,7 @@
 		853206452AE499FD00F507C4 /* Rounting */ = {
 			isa = PBXGroup;
 			children = (
+				8532062E2AE4646500F507C4 /* Message.swift */,
 				85F4B1A12AE49A9300ACF008 /* Route.swift */,
 			);
 			path = Rounting;
@@ -304,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				85EE8EE72ADE0FE5000D6B22 /* User.swift */,
-				8532062E2AE4646500F507C4 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
