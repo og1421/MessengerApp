@@ -71,6 +71,7 @@ class InboxViewModel: ObservableObject {
 //        recentMessages.remove(atOffsets: offset)
         
         MessageService.deleteUserMessage(userID: userID, withId: messageId)
+        MessageService.deleteUserMessage(userID: userID, withId: "recent-messages")
         
     }
 }

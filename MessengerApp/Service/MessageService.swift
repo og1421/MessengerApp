@@ -30,12 +30,10 @@ struct MessageService {
                 documentRef.delete { error in
                     if let error = error {
                         print("Unable to delete message: \(error.localizedDescription)")
-                    }
+                    } 
                 }
             }
         }
-        
-        print("DEBUG: verificando a coleção \n\(collectionRef)")
     }
    
 }
