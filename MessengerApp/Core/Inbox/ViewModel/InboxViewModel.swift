@@ -36,12 +36,21 @@ class InboxViewModel: ObservableObject {
     private func loadInitialMessages(fromChanges changes: [DocumentChange]) {
         var messages = changes.compactMap({ try? $0.document.data(as:Message.self) })
         
+        //TODO - FAZER A VERIFICAÇÃO SE O REGISTRO JÁ EXITE NO RECENTMESSAGES, SE EXISTIR ATUALIZAR O REGISTRO
         for i in 0 ..< messages.count {
             let message = messages[i]
+            let chatPartnerId = message.chatPartnerId
             
-            UserService.fetchUser(withUid: message.chatPartnerId) { user in
-                messages[i].user = user
-                self.recentMessages.append(messages[i])
+            if let index = recentMessages.firstIndex(where: { $0.chatPartnerId == chatPartnerId }) {
+                UserService.fetchUser(withUid: chatPartnerId) { user in
+                    messages[i].user = user
+                    self.recentMessages[index] = messages[i]
+                }
+            } else {
+                UserService.fetchUser(withUid: message.chatPartnerId) { user in
+                    messages[i].user = user
+                    self.recentMessages.append(messages[i])
+                }
             }
         }
     }
@@ -62,13 +71,6 @@ class InboxViewModel: ObservableObject {
             return
             
         }
-        
-        print("DEBUG: o código do presente usuário é:  \(userID)")
-        print("DEBUG: o código da mensagem a ser apagada é: \(messageId)")
-        
-        //TODO - deletar a mensagem do servidor
-        
-//        recentMessages.remove(atOffsets: offset)
         
         MessageService.deleteUserMessage(userID: userID, withId: messageId)
         MessageService.deleteUserMessage(userID: userID, withId: "recent-messages")

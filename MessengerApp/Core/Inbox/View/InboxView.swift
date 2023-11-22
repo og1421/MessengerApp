@@ -29,7 +29,7 @@ struct InboxView: View {
                     .padding(.vertical)
                     .padding(.horizontal, 4)
                 
-                ForEach ( viewModel.recentMessages ) { message in
+                ForEach ( viewModel.recentMessages, id: \.self) { message in
                     ZStack {
                         NavigationLink(value: message) {
                             EmptyView()
