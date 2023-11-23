@@ -36,7 +36,7 @@ struct InboxView: View {
                         }
                         .opacity(0.0)
                         
-                        InboxRowView(message: message)
+                        InboxRowView(message: message, newMessages: viewModel.countNewMessages)
                     }
                 }
                 .onDelete(perform: viewModel.deleteItem)
@@ -47,6 +47,9 @@ struct InboxView: View {
             .navigationDestination(for: Message.self, destination: { message in
                 if let user = message.user {
                     ChatView(user: user)
+                        .onAppear {
+                            viewModel.countNewMessages = 0
+                        }
                 }
             })
             .navigationDestination(for: Route.self, destination: { route in
@@ -55,6 +58,9 @@ struct InboxView: View {
                     ProfileView(user: user)
                 case .chatView(let user):
                     ChatView(user: user)
+                        .onAppear {
+                            viewModel.countNewMessages = 0
+                        }
                 }
             })
             .onChange(of: selectedUser, perform:  { newValue in
@@ -63,6 +69,9 @@ struct InboxView: View {
             .navigationDestination(isPresented: $showChat, destination: {
                 if let user = selectedUser {
                     ChatView(user: user)
+                        .onAppear {
+                            viewModel.countNewMessages = 0
+                        }
                 }
             })
             .fullScreenCover(isPresented: $showNewMessageView) {
@@ -76,10 +85,6 @@ struct InboxView: View {
                                 CircularProfileImageView(user: user, size: .xSmall)
                             
                             }
-                            
-//                            Text("Chats")
-//                                .font(.title)
-//                                .fontWeight(.semibold)
                         }
                     }
                     

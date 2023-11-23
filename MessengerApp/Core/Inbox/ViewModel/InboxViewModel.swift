@@ -13,6 +13,7 @@ import Firebase
 class InboxViewModel: ObservableObject {
     @Published var currentUser: User?
     @Published var recentMessages = [Message]()
+    @Published var countNewMessages: Int = 0
     
     private var cancellables = Set<AnyCancellable>()
     private let service = InboxService()
@@ -36,7 +37,6 @@ class InboxViewModel: ObservableObject {
     private func loadInitialMessages(fromChanges changes: [DocumentChange]) {
         var messages = changes.compactMap({ try? $0.document.data(as:Message.self) })
         
-        //TODO - FAZER A VERIFICAÇÃO SE O REGISTRO JÁ EXITE NO RECENTMESSAGES, SE EXISTIR ATUALIZAR O REGISTRO
         for i in 0 ..< messages.count {
             let message = messages[i]
             let chatPartnerId = message.chatPartnerId
@@ -45,6 +45,7 @@ class InboxViewModel: ObservableObject {
                 UserService.fetchUser(withUid: chatPartnerId) { user in
                     messages[i].user = user
                     self.recentMessages[index] = messages[i]
+                    self.countNewMessages += 1 
                 }
             } else {
                 UserService.fetchUser(withUid: message.chatPartnerId) { user in

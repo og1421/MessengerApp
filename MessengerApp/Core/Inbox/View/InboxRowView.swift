@@ -10,6 +10,7 @@ import SwiftUI
 struct InboxRowView: View {
     //MARK: - Properties
     let message: Message
+    let newMessages: Int
     
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
@@ -27,14 +28,28 @@ struct InboxRowView: View {
                     .frame(maxWidth: UIScreen.main.bounds.width - 100 , alignment: .leading)
             }
             
-            HStack {
-                Text(message.timestampString)
+            VStack{
+                HStack {
+                    Text(message.timestampString)
+                    
+                    Image(systemName: "chevron.right")
+                    
+                }
+                .font(.footnote)
+                .foregroundColor(.gray)
                 
-                Image(systemName: "chevron.right")
-                
+                if newMessages > 0 {
+                    ZStack{
+                        Circle()
+                            .fill(.green)
+                            .frame(width: 18, height: 18)
+                        
+                        Text("\(newMessages)")
+                            .foregroundColor(.white)
+                            .font(.subheadline)
+                    }
+                }
             }
-            .font(.footnote)
-            .foregroundColor(.gray)
             
         }
         .frame(height: 72)
