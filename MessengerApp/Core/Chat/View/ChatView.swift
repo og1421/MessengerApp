@@ -39,7 +39,7 @@ struct ChatView: View {
                 //messages
                 
                 LazyVStack {
-                    ForEach( viewModel.messages ) { message in
+                    ForEach( viewModel.messages, id: \.self) { message in
                         ChatMessageCell(message: message)
                     }
                 }
